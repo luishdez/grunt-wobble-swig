@@ -1,10 +1,10 @@
 {
-  "name": "grunt-swig",
+  "name": "grunt-contrib-swig",
   "version": "0.0.1",
   "description": "Static site compiler built around swig",
   "repository": {
     "type": "git",
-    "url": "https://github.com/luishdez/grunt-swig.git"
+    "url": "https://github.com/luishdez/grunt-contrib-swig.git"
   },
   "main": "grunt.js",
   "keywords": [
