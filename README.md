@@ -1,4 +1,4 @@
-# grunt-contrib-swig
+# grunt-wobble-swig
 
 > A static site compiler for grunt based on
 [swig templates](http://paularmstrong.github.com/swig/)
