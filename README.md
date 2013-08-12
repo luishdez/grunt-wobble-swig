@@ -1,4 +1,4 @@
-# grunt-wobble-swig
+# grunt-wobble-swig [![Build Status](https://travis-ci.org/luishdez/grunt-wobble-swig.png?branch=master)](https://travis-ci.org/luishdez/grunt-wobble-swig)
 
 > A static site compiler for grunt based on
 [swig templates](http://paularmstrong.github.com/swig/)
