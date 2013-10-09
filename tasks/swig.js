@@ -13,14 +13,12 @@ module.exports = function(grunt) {
         d = new Date;
         d = d.toISOString()
 
-    swig.init(config.data.init);
-
     config.filesSrc.forEach(function(filename) {
 
       var file = file_re.exec(filename)[1],
-          tpl = swig.compileFile(filename),
+          template = swig.compileFile(config.data.init.root + filename),
           destFile = config.data.dest + file,
-          tplVars = {},
+          templateVars = {},
           contextVars = {},
           globalVars = {};
 
@@ -34,9 +32,9 @@ module.exports = function(grunt) {
       }
 
       try {
-        tplVars = grunt.file.readJSON(config.data.init.root + file + ".json");
+        templateVars = grunt.file.readJSON(config.data.init.root + file + ".json");
       } catch(err) {
-        tplVars = {};
+        templateVars = {};
       }
 
       try {
@@ -45,11 +43,11 @@ module.exports = function(grunt) {
         contextVars = {};
       }
 
-      tplVars.context = context;
+      templateVars.context = context;
 
       grunt.log.writeln('Writing file to ' + destFile);
 
-      grunt.file.write(destFile, tpl.render(grunt.util._.extend(globalVars, tplVars, contextVars)));
+      grunt.file.write(destFile, template(grunt.util._.extend(globalVars, templateVars, contextVars)));
 
     });
 
