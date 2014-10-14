@@ -17,17 +17,17 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "swig": "~1.1.0"
+    "swig": "~1.4.2"
   },
   "scripts":{
     "test": "grunt test"
   },
   "devDependencies": {
-    "grunt": "~0.4.0",
-    "grunt-contrib-clean": "~0.4.1",
-    "grunt-mocha-test": "~0.2.2"
+    "grunt": "~0.4.5",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-mocha-test": "~0.12.1"
   },
   "peerDependencies": {
-    "grunt": "~0.4.0"
+    "grunt": "~0.4.5"
   }
 }
